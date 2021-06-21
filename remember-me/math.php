@@ -2,10 +2,10 @@
 session_start();
 
 
-if (isset($_POST['user_login'])) {
+if (isset($_POST['user_login'])) { 
 	
 
-	if ($_POST['kadi']=="admin" && $_POST['pass']=="123456") {
+	if ($_POST['kadi']=="admin" && $_POST['pass']=="123456") { // admin pas
 		
 		$_SESSION['kadi']=$_POST['kadi'];
 		$_SESSION['pass']=$_POST['pass'];
@@ -21,16 +21,16 @@ if (isset($_POST['user_login'])) {
 
 
 
-			setcookie("kadi","admin",strtotime("-1 day"));
+			setcookie("kadi","admin",strtotime("-1 day")); // cookie day
 			setcookie("pass","123456",strtotime("-1 day"));
 		}
 
-		header("Location:index.php?durum=true");
+		header("Location:index.php?durum=true"); // id == true
 		exit;
 	} else {
 
 		//giriş bilgileri doğru değilse
-		header("Location:index.php?durum=false");
+		header("Location:index.php?durum=false"); // false
 		exit;
 	}
 

@@ -31,6 +31,7 @@ if (isset($_POST['user_login'])) {
 
 		//giriş bilgileri doğru değilse
 		header("Location:index.php?durum=false"); // false
+		echo('testbin')
 		exit;
 	}
 
